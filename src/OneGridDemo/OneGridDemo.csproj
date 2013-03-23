@@ -44,6 +44,9 @@
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.0\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -76,6 +79,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructures\DataContext.cs" />
+    <Compile Include="Infrastructures\FlexiGridClient.cs" />
+    <Compile Include="Infrastructures\FlexiGridRequest.cs" />
+    <Compile Include="Infrastructures\FlexiGridResult.cs" />
+    <Compile Include="Infrastructures\QueryableExtensions.cs" />
+    <Compile Include="Models\FlexiGridModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -84,6 +92,7 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.flexigrid.css" />
     <Content Include="Content\DataTables-1.9.4\docs\media\css\doc.css" />
     <Content Include="Content\DataTables-1.9.4\docs\media\css\shCore.css" />
     <Content Include="Content\DataTables-1.9.4\docs\media\css\shThemeDataTables.css" />
@@ -185,6 +194,10 @@
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\jquery.jqGrid\ellipsis-xbl.xml" />
     <Content Include="Content\jquery.jqGrid\ui.jqgrid.css" />
+    <Content Include="Content\select2.css" />
+    <Content Include="Content\select2.png" />
+    <Content Include="Content\select2x2.png" />
+    <Content Include="Content\spinner.gif" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -345,6 +358,8 @@
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\select2.js" />
+    <Content Include="Scripts\select2.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -387,7 +402,7 @@
     <None Include="Scripts\DataTables-1.9.4\extras\TableTools\media\js\TableTools.min.js.gz" />
     <None Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\FlexiGrid\Index.cshtml" />
+    <Content Include="Views\FlexiGrid\PagingSorting.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

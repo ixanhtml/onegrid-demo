@@ -3,8 +3,11 @@
 <head>
     <title>@ViewBag.Title</title>
     @Assets.CSS("bootstrap.min.css")
+    @Assets.CSS("flexigrid/flexigrid.css")
+    @Assets.CSS("select2.css")
     @Assets.CSS("Site.css")
     @Assets.Script("jquery-1.9.1.min.js")
+    @Assets.Script("bootstrap.min.js")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-static-top">
@@ -12,7 +15,13 @@
             <a class="brand" href="#">One Grid - Demo</a>
             <ul class="nav pull-right">
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("Flexi Grid", "Index", "FlexiGrid")</li>
+                <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">FlexiGrid
+                    <b class="caret"></b>
+                </a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Paging & Sorting", "PagingSorting", "FlexiGrid")</li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
