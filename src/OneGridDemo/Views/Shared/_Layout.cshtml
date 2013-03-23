@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    @Assets.CSS("bootstrap.min.css")
+    @Assets.CSS("Site.css")
+    @Assets.Script("jquery-1.9.1.min.js")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="navbar-inner">
+            <a class="brand" href="#">One Grid - Demo</a>
+            <ul class="nav pull-right">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Flexi Grid", "Index", "FlexiGrid")</li>
+            </ul>
+        </div>
+    </div>
+    @RenderBody()
+</body>
+</html>

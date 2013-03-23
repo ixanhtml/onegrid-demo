@@ -1,0 +1,10 @@
+﻿@helper CSS(string cssFile, string media = "screen")
+    {
+        var href = @URL.SiteRoot() + "/Content/" + @cssFile;
+    <link href="@href" rel="stylesheet" type="text/css" media="@media" /> 
+}
+@helper Script(string scriptFile)
+    {
+        var href = @URL.SiteRoot() + "/Scripts/" + @scriptFile;
+    <script src="@href" type="text/javascript" ></script>
+}
