@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@Assets.Script("DataTables-1.9.4/media/js/jquery.dataTables.min.js")
+@Assets.Script("select2.js")
+@Assets.CSS("DataTables-1.9.4/media/css/jquery.dataTables.css")
+@Assets.CSS("Site.Datatable.css")
+<div class="page-header">
+    <h1>Datatable.net Sample</h1>
+</div>
+<div class="markdown-body">
+    <h4>Main Feature</h4>
+    <ul>
+        <li><a href="#BasicConfig">Basic Configuration</a></li>
+    </ul>
+</div>
+<div class="demo">
+    <div class="demo-group">
+        <h4 id="BasicConfig">Basic Configuration <a href="#" class="top">#top</a></h4>
+        <table cellpadding="0" cellspacing="0" border="0" class="display" id="TGrid-BasicConfig">
+            <thead>
+                <tr>
+                    <th width="15%">ID</th>
+                    <th width="40%">Product Name</th>
+                    <th width="30%">Product No</th>
+                    <th width="15%">Color</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5" class="dataTables_empty">Loading data from server</td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <label>Source code :</label>
+        <pre class="prettyprint linenums">
+        $('#TGrid-BasicConfig').dataTable({
+            "bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": '@Url.Content("~/Datatable/ProductList")',
+            "sServerMethod": "POST"
+        });
+        </pre>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#TGrid-BasicConfig').dataTable({
+            //"bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": '@Url.Content("~/Datatable/ProductList")',
+            "sServerMethod": "POST"
+        });
+    });
+</script>

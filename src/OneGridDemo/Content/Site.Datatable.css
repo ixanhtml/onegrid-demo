@@ -1,0 +1,6 @@
+/* Bootstrap Override
+-----------------------------------------------------------*/
+.demo .demo-group label
+{
+    display: inline-block;
+}

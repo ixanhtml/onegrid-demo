@@ -34,14 +34,5 @@ namespace OneGridDemo.Controllers
             }
             return View();
         }
-
-        public JsonResult FlexiGridClient(string url)
-        {
-            return Json(new FlexiGridClient
-            {
-                url = url,
-                dataType = "json",
-            });
-        }
     }
 }
