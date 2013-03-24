@@ -5,26 +5,66 @@
     @Assets.CSS("bootstrap.min.css")
     @Assets.CSS("flexigrid/flexigrid.css")
     @Assets.CSS("select2.css")
+    @Assets.CSS("prettify.css")
     @Assets.CSS("Site.css")
     @Assets.Script("jquery-1.9.1.min.js")
-    @Assets.Script("bootstrap.min.js")
+    @Assets.Script("prettify.js")
+    @*@Assets.Script("bootstrap.min.js")*@
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <a class="brand" href="#">One Grid - Demo</a>
             <ul class="nav pull-right">
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">FlexiGrid
-                    <b class="caret"></b>
-                </a>
-                    <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Paging & Sorting", "PagingSorting", "FlexiGrid")</li>
-                    </ul>
-                </li>
+                <li>@Html.ActionLink("FlexiGrid", "Index", "FlexiGrid")</li>
             </ul>
         </div>
     </div>
-    @RenderBody()
+    <div class="wrap-main">
+        <div id="wrap-body">
+            @RenderBody()
+        </div>
+    </div>
 </body>
 </html>
+<style type="text/css">
+    body
+    {
+        background-color: #DDD;
+    }
+    .wrap-main
+    {
+        margin-left: 50%;
+    }
+    .wrap-main #wrap-body
+    {
+        margin-left: -512px;
+        padding: 40px 30px;
+        width: 1024px;
+        background-color: White;
+    }
+    .wrap-main #wrap-body .markdown-body
+    {
+        margin-bottom: -30px;
+    }
+    .wrap-main #wrap-body .demo .top
+    {
+        float: right;
+        font-weight: normal;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    .wrap-main #wrap-body .demo h4
+    {
+        padding-top: 50px;
+    }
+    .wrap-main #wrap-body .demo .demo-group
+    {
+        margin-bottom: -30px;
+    }
+    .wrap-main #wrap-body .demo label
+    {
+        margin-top: 10px;
+    }
+</style>

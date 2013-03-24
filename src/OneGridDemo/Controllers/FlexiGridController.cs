@@ -13,7 +13,7 @@ namespace OneGridDemo.Controllers
 {
     public class FlexiGridController : DbController
     {
-        public ActionResult PagingSorting()
+        public ActionResult Index()
         {
             return View();
         }

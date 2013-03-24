@@ -402,7 +402,7 @@
     <None Include="Scripts\DataTables-1.9.4\extras\TableTools\media\js\TableTools.min.js.gz" />
     <None Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\FlexiGrid\PagingSorting.cshtml" />
+    <Content Include="Views\FlexiGrid\Index.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
