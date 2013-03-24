@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Minimod.PrettyTypeSignatures</id>
+    <version>1.0.0</version>
+    <authors>Lars Corneliussen</authors>
+    <owners>Lars Corneliussen</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extends System.Type, System.Reflection.MethodBase and System.Diagnostics.StackFrame by a method called 'GetPrettyName()'.</description>
+    <summary>A minimod with reflection extensions, printing nice type and type member names</summary>
+    <tags>minimod</tags>
+    <references />
+  </metadata>
+</package>

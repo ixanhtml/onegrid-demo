@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@Assets.Script("flexigrid.js")
+@Assets.Script("select2.js")
+@Assets.CSS("Site.flexigrid.css")
+<div class="page-header">
+    <h1>FlexiGrid Sample</h1>
+</div>
+<div class="markdown-body">
+    <h4>Basic Feature</h4>
+    <ul>
+        <li><a href="#Paging">Paging</a></li>
+        <li><a href="#Sorting">Sorting</a></li>
+        <li><a href="#Filtering">Filtering</a></li>
+    </ul>
+</div>
+<div class="demo">
+    <div class="demo-group">
+        <h4 id="Paging">Paging Demo <a href="#" class="top">#top</a></h4>
+        <table id="TGrid-Paging"></table>
+        <label>Source code :</label>
+        <pre class="prettyprint linenums">
+        $('#TGrid-Paging').flexigrid({
+            url: '@Url.Content("~/FlexiGrid/ProductList")',
+            dataType: 'json',
+            colModel: [
+                { name: 'ProductID', display: 'ID' },
+                { name: 'Name', display: 'Product Name', width: 200 },
+                { name: 'ProductNumber', display: 'Product No' },
+                { name: 'Color', display: 'Color' },
+            ],
+            sortname: 'ProductID',
+            usepager: true,
+            title: 'Product List - Paging Demo',
+            rp: 10
+        });
+        </pre>
+    </div>
+    <div class="demo-group">
+        <h4 id="Sorting">Sorting Demo <a href="#" class="top">#top</a></h4>
+        <table id="TGrid-Sorting"></table>
+        <label>Source code :</label>
+        <pre class="prettyprint linenums">
+        $('#TGrid-Sorting').flexigrid({
+            url: '@Url.Content("~/FlexiGrid/ProductList")',
+            dataType: 'json',
+            colModel: [
+                { name: 'ProductID', display: 'ID', sortable: true },
+                { name: 'Name', display: 'Product Name', width: 200, sortable: true },
+                { name: 'ProductNumber', display: 'Product No', sortable: true },
+                { name: 'Color', display: 'Color', sortable: true },
+            ],
+            sortname: 'ProductID',
+            usepager: true,
+            title: 'Product List - Sorting Demo',
+            rp: 10
+        });
+        </pre>
+    </div>
+    <div class="demo-group">
+        <h4 id="Filtering">Filering Demo <a href="#" class="top">#top</a></h4>
+        <table id="TGrid-Filtering"></table>
+        <label>Source code :</label>
+        <pre class="prettyprint linenums">
+        $('#TGrid-Filtering').flexigrid({
+            url: '@Url.Content("~/FlexiGrid/ProductList")',
+            dataType: 'json',
+            colModel: [
+                { name: 'ProductID', display: 'ID', sortable: true },
+                { name: 'Name', display: 'Product Name', width: 200, sortable: true },
+                { name: 'ProductNumber', display: 'Product No', sortable: true },
+                { name: 'Color', display: 'Color', sortable: true },
+            ],
+            searchitems: [
+                { name: 'Name', display: 'Product Name', isdefault: true },
+                { name: 'ProductNumber', display: 'Product No' },
+                { name: 'Color', display: 'Color' },
+            ],
+            sortname: 'ProductID',
+            usepager: true,
+            title: 'Product List - Filtering Demo',
+            rp: 10,
+            singleSelect: true
+        });
+        </pre>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#TGrid-Paging').flexigrid({
+            url: '@Url.Content("~/FlexiGrid/ProductList")',
+            dataType: 'json',
+            colModel: [
+                { name: 'ProductID', display: 'ID' },
+                { name: 'Name', display: 'Product Name', width: 200 },
+                { name: 'ProductNumber', display: 'Product No' },
+                { name: 'Color', display: 'Color' },
+            ],
+            sortname: 'ProductID',
+            usepager: true,
+            title: 'Product List - Paging Demo',
+            rp: 10
+        });
+
+        $('#TGrid-Sorting').flexigrid({
+            url: '@Url.Content("~/FlexiGrid/ProductList")',
+            dataType: 'json',
+            colModel: [
+                { name: 'ProductID', display: 'ID', sortable: true },
+                { name: 'Name', display: 'Product Name', width: 200, sortable: true },
+                { name: 'ProductNumber', display: 'Product No', sortable: true },
+                { name: 'Color', display: 'Color', sortable: true },
+            ],
+            sortname: 'ProductID',
+            usepager: true,
+            title: 'Product List - Sorting Demo',
+            rp: 10
+        });
+
+        $('#TGrid-Filtering').flexigrid({
+            url: '@Url.Content("~/FlexiGrid/ProductList")',
+            dataType: 'json',
+            colModel: [
+                { name: 'ProductID', display: 'ID', sortable: true },
+                { name: 'Name', display: 'Product Name', width: 200, sortable: true },
+                { name: 'ProductNumber', display: 'Product No', sortable: true },
+                { name: 'Color', display: 'Color', sortable: true },
+            ],
+            searchitems: [
+                { name: 'Name', display: 'Product Name', isdefault: true },
+                { name: 'ProductNumber', display: 'Product No' },
+                { name: 'Color', display: 'Color' },
+            ],
+            sortname: 'ProductID',
+            usepager: true,
+            title: 'Product List - Filtering Demo',
+            rp: 10,
+            singleSelect: true
+        });
+
+        $('select').select2();
+    });
+</script>

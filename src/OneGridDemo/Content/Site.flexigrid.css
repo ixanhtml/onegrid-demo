@@ -1,0 +1,69 @@
+/* Bootstrap Override
+-----------------------------------------------------------*/
+.flexigrid .select2-choice span
+{
+    padding: 0;
+    margin: 0;
+}
+
+.flexigrid .select2-choice div b
+{
+    margin-top: -2px;
+}
+
+.flexigrid div.bDiv
+{
+}
+
+.flexigrid div.bDiv table
+{
+    margin: 0;
+}
+
+.flexigrid div.sDiv input
+{
+    margin: 1px 0 0 5px;
+    padding: 1px 5px;
+    width: 120px;
+    font-size: 12px;
+}
+
+.flexigrid div.sDiv .select2-choice
+{
+    width: 220px;
+    top: 1px;
+    line-height: 22px;
+    height: 22px;
+}
+
+.flexigrid div.pDiv input
+{
+    margin: 0;
+    top: -4px;
+    padding: 1px 5px;
+    width: 40px;
+    font-size: 12px;
+}
+
+.flexigrid div.pDiv .select2-choice
+{
+    width: 60px;
+    top: 1px;
+    line-height: 22px;
+    height: 22px;
+}
+
+.flexigrid div.bDiv
+{
+    height: auto !important;
+}
+
+.flexigrid div.vGrip
+{
+    display: none;
+}
+
+.flexigrid div.nDiv
+{
+    height: auto !important;
+}

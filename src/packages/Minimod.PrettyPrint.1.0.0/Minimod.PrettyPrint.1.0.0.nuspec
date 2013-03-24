@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Minimod.PrettyPrint</id>
+    <version>1.0.0</version>
+    <title>Minimod.PrettyPrint</title>
+    <authors>Lars Corneliussen</authors>
+    <owners>Lars Corneliussen</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Creates nice textual representations of any objects. Mostly meant for debug/informational output.</description>
+    <summary>Creates nice textual representations of any objects. Mostly meant for debug/informational output.</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>minimod</tags>
+    <dependencies>
+      <dependency id="Minimod.PrettyText" />
+      <dependency id="Minimod.PrettyTypeSignatures" />
+      <dependency id="Minimod.PrettyDateAndTime" />
+    </dependencies>
+    <references />
+  </metadata>
+</package>
