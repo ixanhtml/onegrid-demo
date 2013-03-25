@@ -16,6 +16,24 @@ namespace OneGridDemo.Controllers
         }
 
         [HttpPost]
+        public ActionResult ProductListAll()
+        {
+            if (Request.IsAjaxRequest())
+            {
+                var list = ctx.Product.Select(p => new ProductModel
+                {
+                    ProductID = p.ProductID,
+                    Name = p.Name,
+                    ProductNumber = p.ProductNumber,
+                    Color = p.Color
+                }).ToList();
+
+                return Json(list);
+            }
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult ProductList(DatatableRequest request)
         {
             if (Request.IsAjaxRequest())
